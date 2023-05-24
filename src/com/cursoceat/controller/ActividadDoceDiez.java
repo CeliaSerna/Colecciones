@@ -26,11 +26,21 @@ public class ActividadDoceDiez {
 	for (Integer e: sinRepes) {
 		lista.remove(e);	
 	}
+	//se quedan en la lista los que se han repetido 
 	repetidos.addAll(lista);
-	
 	System.out.println("repetidos " + repetidos);
 	
+	//mostrar el elemento que no se repita en la lista original
+	Set<Integer> unico= new TreeSet<>();
+	unico.addAll(sinRepes);
+	unico.removeAll(repetidos);
+	System.out.println("Elementos que solo se repite 1 vez en el conjunto original"+unico);
 		
+	
+	
+	
+	
+	
 	}
 
 }
